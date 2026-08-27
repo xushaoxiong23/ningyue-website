@@ -1,1 +1,1036 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>南京宁跃网络科技有限公司</title>
+
+  <meta
+    name="description"
+    content="南京宁跃网络科技有限公司，专注于软件开发、移动应用开发、智能应用及互联网技术服务。"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+      color: #1d1d1f;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       顶部导航
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #eeeeee;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1180px;
+      height: 72px;
+      margin: 0 auto;
+      padding: 0 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111111;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+    }
+
+    .nav-links a {
+      color: #444444;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0066ff;
+    }
+
+    /* =========================
+       首页
+    ========================= */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(0, 102, 255, 0.12),
+          transparent 35%
+        ),
+        linear-gradient(
+          180deg,
+          #f7faff 0%,
+          #ffffff 100%
+        );
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 7px 14px;
+      margin-bottom: 24px;
+
+      color: #0066ff;
+      background: #eaf2ff;
+      border-radius: 20px;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+
+      font-size: 58px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      color: #111111;
+    }
+
+    .hero h1 span {
+      color: #0066ff;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin-top: 28px;
+
+      color: #666666;
+      font-size: 19px;
+      line-height: 1.9;
+    }
+
+    .hero-buttons {
+      margin-top: 38px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+
+      padding: 13px 24px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      background: #0066ff;
+    }
+
+    .btn-primary:hover {
+      background: #0054d6;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      color: #333333;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+    }
+
+    .btn-secondary:hover {
+      background: #f5f5f5;
+    }
+
+    /* =========================
+       通用区域
+    ========================= */
+
+    section {
+      padding: 100px 24px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      color: #0066ff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .section-description {
+      max-width: 700px;
+      color: #777777;
+      font-size: 17px;
+    }
+
+    /* =========================
+       关于我们
+    ========================= */
+
+    .about {
+      background: #ffffff;
+    }
+
+    .about-content {
+      margin-top: 50px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .about-text {
+      color: #555555;
+      font-size: 16px;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    .company-card {
+      padding: 35px;
+
+      background: #f7f9fc;
+      border: 1px solid #eeeeee;
+      border-radius: 16px;
+    }
+
+    .company-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .company-item:last-child {
+      border-bottom: none;
+    }
+
+    .company-item span {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #999999;
+      font-size: 13px;
+    }
+
+    .company-item strong {
+      color: #222222;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* =========================
+       业务
+    ========================= */
+
+    .services {
+      background: #f7f9fc;
+    }
+
+    .service-grid {
+      margin-top: 50px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      min-height: 230px;
+      padding: 32px;
+
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      border-radius: 16px;
+
+      transition: all 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.07);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 24px;
+
+      color: #0066ff;
+      background: #eaf2ff;
+      border-radius: 12px;
+
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      color: #777777;
+      font-size: 15px;
+    }
+
+    /* =========================
+       技术方向
+    ========================= */
+
+    .technology {
+      background: #ffffff;
+    }
+
+    .technology-box {
+      margin-top: 50px;
+      padding: 50px;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #101828,
+          #16294a
+        );
+
+      border-radius: 22px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .technology-box h3 {
+      margin-bottom: 18px;
+      font-size: 30px;
+    }
+
+    .technology-box p {
+      color: #c7d0df;
+      line-height: 1.9;
+    }
+
+    .tech-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .tech-item {
+      padding: 15px 18px;
+
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+
+      color: #e9eef7;
+      font-size: 14px;
+    }
+
+    /* =========================
+       联系我们
+    ========================= */
+
+    .contact {
+      background: #f7f9fc;
+    }
+
+    .contact-box {
+      margin-top: 50px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 30px;
+
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      border-radius: 14px;
+    }
+
+    .contact-card span {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #999999;
+      font-size: 13px;
+    }
+
+    .contact-card strong,
+    .contact-card a {
+      color: #222222;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: #0066ff;
+    }
+
+    /* =========================
+       页脚
+    ========================= */
+
+    footer {
+      padding: 45px 24px;
+      background: #101318;
+      color: #999999;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-company {
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .footer-contact {
+      text-align: right;
+    }
+
+    .footer-contact a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      color: #ffffff;
+    }
+
+    /* =========================
+       手机适配
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 560px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .about-content,
+      .technology-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .technology-box {
+        padding: 30px;
+      }
+
+      .tech-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-contact {
+        text-align: left;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 顶部导航 -->
+  <header>
+
+    <div class="nav">
+
+      <a href="#" class="logo">
+        南京宁跃网络科技
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">关于我们</a>
+        <a href="#services">业务领域</a>
+        <a href="#technology">技术方向</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- 首页 -->
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-inner">
+
+        <div class="hero-tag">
+          NINGYUE TECHNOLOGY
+        </div>
+
+        <h1>
+          用技术创造
+          <span>更好的数字产品</span>
+        </h1>
+
+        <p>
+          南京宁跃网络科技有限公司专注于软件开发、
+          移动应用开发、智能应用及互联网技术服务，
+          致力于通过技术创新，为用户提供简单、
+          稳定、高效的数字化产品与服务。
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#about"
+            class="btn btn-primary"
+          >
+            了解我们
+          </a>
+
+          <a
+            href="mailto:shaojie@ningyue.xyz"
+            class="btn btn-secondary"
+          >
+            联系我们
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 关于我们 -->
+
+    <section
+      class="about"
+      id="about"
+    >
+
+      <div class="container">
+
+        <div class="section-label">
+          ABOUT US
+        </div>
+
+        <h2 class="section-title">
+          关于宁跃
+        </h2>
+
+        <p class="section-description">
+          我们专注于软件与互联网产品研发，
+          持续探索移动应用、智能应用和数字化服务。
+        </p>
+
+
+        <div class="about-content">
+
+          <div class="about-text">
+
+            <p>
+              南京宁跃网络科技有限公司是一家专注于
+              软件开发和互联网技术服务的科技企业。
+            </p>
+
+            <p>
+              公司围绕移动应用、软件产品、
+              数字化工具及智能应用等方向开展产品研发，
+              致力于打造稳定、易用且具有长期价值的软件产品。
+            </p>
+
+            <p>
+              我们重视产品体验、技术质量与持续创新，
+              希望通过技术帮助用户获得更加高效、
+              便捷的数字化体验。
+            </p>
+
+          </div>
+
+
+          <div class="company-card">
+
+            <div class="company-item">
+              <span>公司名称</span>
+              <strong>
+                南京宁跃网络科技有限公司
+              </strong>
+            </div>
+
+            <div class="company-item">
+              <span>英文名称</span>
+              <strong>
+                Nanjing Ningyue Network Technology Co., Ltd.
+              </strong>
+            </div>
+
+            <div class="company-item">
+              <span>所在地</span>
+              <strong>
+                中国 · 江苏 · 南京
+              </strong>
+            </div>
+
+            <div class="company-item">
+              <span>企业邮箱</span>
+
+              <strong>
+                <a href="mailto:shaojie@ningyue.xyz">
+                  shaojie@ningyue.xyz
+                </a>
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 业务领域 -->
+
+    <section
+      class="services"
+      id="services"
+    >
+
+      <div class="container">
+
+        <div class="section-label">
+          SERVICES
+        </div>
+
+        <h2 class="section-title">
+          业务领域
+        </h2>
+
+        <p class="section-description">
+          围绕软件产品、移动应用和智能技术，
+          提供产品研发及技术服务。
+        </p>
+
+
+        <div class="service-grid">
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              01
+            </div>
+
+            <h3>
+              软件开发
+            </h3>
+
+            <p>
+              提供软件产品设计、开发及技术支持，
+              持续提升产品稳定性和用户体验。
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              02
+            </div>
+
+            <h3>
+              移动应用
+            </h3>
+
+            <p>
+              面向移动设备及智能终端，
+              开发实用、高效、易用的应用产品。
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              03
+            </div>
+
+            <h3>
+              智能应用
+            </h3>
+
+            <p>
+              探索人工智能与软件产品结合，
+              打造更加智能化的数字产品体验。
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              04
+            </div>
+
+            <h3>
+              网络技术服务
+            </h3>
+
+            <p>
+              提供互联网技术、系统开发、
+              信息技术咨询及相关技术支持服务。
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              05
+            </div>
+
+            <h3>
+              数字化产品
+            </h3>
+
+            <p>
+              围绕用户需求设计数字化工具和产品，
+              提升信息处理与使用效率。
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              06
+            </div>
+
+            <h3>
+              技术研发
+            </h3>
+
+            <p>
+              持续关注新技术与新平台，
+              探索具有实际应用价值的产品方向。
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 技术方向 -->
+
+    <section
+      class="technology"
+      id="technology"
+    >
+
+      <div class="container">
+
+        <div class="section-label">
+          TECHNOLOGY
+        </div>
+
+        <h2 class="section-title">
+          技术与创新
+        </h2>
+
+        <p class="section-description">
+          关注移动互联网、智能终端与人工智能技术，
+          持续进行产品研发和技术探索。
+        </p>
+
+
+        <div class="technology-box">
+
+          <div>
+
+            <h3>
+              Technology × Product
+            </h3>
+
+            <p>
+              我们相信好的技术最终应该服务于产品和用户。
+              通过持续研发和产品迭代，
+              将技术能力转化为简单、稳定、
+              易用的数字化产品。
+            </p>
+
+          </div>
+
+
+          <div class="tech-list">
+
+            <div class="tech-item">
+              移动应用开发
+            </div>
+
+            <div class="tech-item">
+              智能终端应用
+            </div>
+
+            <div class="tech-item">
+              人工智能应用
+            </div>
+
+            <div class="tech-item">
+              软件产品研发
+            </div>
+
+            <div class="tech-item">
+              网络技术服务
+            </div>
+
+            <div class="tech-item">
+              数字化解决方案
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 联系我们 -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="section-label">
+          CONTACT
+        </div>
+
+        <h2 class="section-title">
+          联系我们
+        </h2>
+
+        <p class="section-description">
+          如需商务合作、产品咨询或其他事项，
+          欢迎通过企业邮箱与我们联系。
+        </p>
+
+
+        <div class="contact-box">
+
+          <div class="contact-card">
+
+            <span>
+              企业邮箱
+            </span>
+
+            <a href="mailto:shaojie@ningyue.xyz">
+              shaojie@ningyue.xyz
+            </a>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <span>
+              公司名称
+            </span>
+
+            <strong>
+              南京宁跃网络科技有限公司
+            </strong>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <span>
+              所在地区
+            </span>
+
+            <strong>
+              江苏省南京市
+            </strong>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <span>
+              官方域名
+            </span>
+
+            <strong>
+              ningyue.xyz
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- 页脚 -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div>
+
+        <div class="footer-company">
+          南京宁跃网络科技有限公司
+        </div>
+
+        <div>
+          Nanjing Ningyue Network Technology Co., Ltd.
+        </div>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <div>
+          Contact:
+          <a href="mailto:shaojie@ningyue.xyz">
+            shaojie@ningyue.xyz
+          </a>
+        </div>
+
+        <div>
+          © 2026 Nanjing Ningyue Network Technology Co., Ltd.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
